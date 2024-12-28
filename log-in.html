@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In - Smart Spending</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .logo {
+      width: 100px; /* Increased logo size */
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #6b050d;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #7f8c8d;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px; /* Reduced padding for compact form */
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s ease;
+    }
+
+    input:focus {
+      border-color: #3498db;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px; /* Reduced padding for compact button */
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    .footer {
+      margin-top: 1rem;
+      color: #7f8c8d;
+      font-size: 0.9rem;
+    }
+
+    .footer a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="assets/images/smart-home-3653441.png" alt="Smart Spending Logo" class="logo">
+    <h1>Welcome Back!</h1>
+    <p>Log in to access your spending insights and track your progress.</p>
+    <form id="loginForm" onsubmit="return loginRedirect()">
+      <input type="email" id="email" placeholder="Email Address" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+    </form>
+    <div class="footer">
+      <p>Don't have an account? <a href="sign-up.html">Sign Up</a></p>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript function for handling login and redirection to dashboard
+    function loginRedirect() {
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      // Simulating login validation (you can replace this with actual logic)
+      if (email && password) {
+        // Simulate successful login and redirect to dashboard
+        setTimeout(function() {
+          window.location.href = "dashboard.html"; // Redirect to the dashboard page
+        }, 500); // Adding a delay for simulation
+        return false; // Prevent form submission to simulate the process
+      } else {
+        alert("Please enter valid email and password.");
+        return false; // Prevent form submission if the fields are empty
+      }
+    }
+  </script>
+</body>
+</html>

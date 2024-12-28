@@ -1,0 +1,371 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #730606;
+  color: #fff;
+  padding: 1rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav .logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+header nav .logo {
+  width: 150px;
+  height: auto;
+}
+
+header nav h1 {
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+header nav ul li a:hover {
+  background-color: #890505;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  text-align: center;
+  background: linear-gradient(135deg, #FF0000, #FFE5E5);
+  color: #fff;
+  padding: 3rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+.hero h2 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+.hero button {
+  background-color: #fff;
+  color: #FF0000;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.8rem 2.2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.hero button:hover {
+  background-color: #FF0000;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Main Section */
+.reports {
+  text-align: center;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+}
+
+.reports h2 {
+  font-size: 2.5rem;
+  color: #730606;
+  margin-bottom: 1rem;
+}
+
+.reports p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.reports button {
+  background-color: #730606;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 0.8rem 2.2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.reports button:hover {
+  background-color: #890505;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Dashboard */
+.dashboard-header {
+  text-align: center;
+  background-color: #890505;
+  color: #fff;
+  padding: 2rem 1rem;
+}
+
+.dashboard-header h2 {
+  font-size: 2.2rem;
+}
+
+.dashboard-header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.dashboard-overview {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.summary-card {
+  flex: 1 1 calc(30% - 1.5rem);
+  background-color: #fff;
+  border: 1px solid #890505;
+  border-radius: 8px;
+  text-align: center;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  min-height: 220px;
+}
+
+.summary-card h3 {
+  font-size: 1.6rem;
+  color: #370202;
+  margin-bottom: 0.5rem;
+}
+
+.summary-card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.income-card {
+  background-color: #FFE5E5;
+}
+
+.expense-card {
+  background-color: #FFCCCC;
+}
+
+.savings-card {
+  background-color: #FFD9D9;
+}
+
+/* Quick Actions */
+.quick-actions {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem auto;
+  flex-wrap: wrap;
+}
+
+.quick-actions button {
+  background-color: #480404;
+  color: #fff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.quick-actions button:hover {
+  background-color: #CC0000;
+  transform: scale(1.05);
+}
+
+.quick-actions button:active {
+  transform: scale(1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #620404;
+  color: #fff;
+  padding: 1.5rem;
+  margin-top: 3rem;
+  font-size: 1rem;
+}
+
+/* Forms */
+form {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #730606;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #730606;
+  outline: none;
+}
+
+form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #730606;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+form button:hover {
+  background-color: #890505;
+  transform: scale(1.05);
+}
+
+form button:active {
+  transform: scale(1);
+}
+
+/* Report Section */
+.generated-report {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.generated-report table {
+  width: 100%;
+  margin-top: 15px;
+  border-collapse: collapse;
+}
+
+.generated-report th,
+.generated-report td {
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.generated-report th {
+  background-color: #730606;
+  color: #fff;
+  font-weight: bold;
+}
+
+.generated-report td {
+  background-color: #fff;
+}
+
+.generated-report td:nth-child(even) {
+  background-color: #f7f7f7;
+}
+

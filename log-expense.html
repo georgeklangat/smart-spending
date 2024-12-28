@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log Expense</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="assets/images/smart-home-3653441.png" alt="Smart Spending Logo" class="logo" width="50">
+        <h1>Smart Spending</h1>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="log-expense.html">Log Expense</a></li>
+        <li><a href="budget-planner.html">Budget Planner</a></li>
+        <li><a href="view-reports.html">View Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Log Your Expense</h2>
+    <form action="#">
+      <label for="date">Date:</label>
+      <input type="date" id="date" name="date" required>
+      <label for="category">Category:</label>
+      <select id="category" name="category">
+        <option value="food">Food</option>
+        <option value="transport">Transport</option>
+        <option value="utilities">Utilities</option>
+        <option value="entertainment">Entertainment</option>
+      </select>
+      <label for="amount">Amount:</label>
+      <input type="number" id="amount" name="amount" required>
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4"></textarea>
+      <button type="submit">Log Expense</button>
+    </form>
+  </main>
+  <footer>
+    <p>© 2024 Smart Spending. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

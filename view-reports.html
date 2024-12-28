@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Reports</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script>
+    // This is just a simulation of the report generation process
+    function generateReport() {
+      const reportSection = document.getElementById('report-section');
+      const reportContent = `
+        <div class="report-content">
+          <h3 class="report-title">Generated Report:</h3>
+          <table class="report-table">
+            <tr>
+              <th>Income</th>
+              <td>$1500</td>
+            </tr>
+            <tr>
+              <th>Expenses</th>
+              <td>$900</td>
+            </tr>
+            <tr>
+              <th>Savings</th>
+              <td>$600</td>
+            </tr>
+            <tr>
+              <th>Spending Trends</th>
+              <td>Your spending has been consistently under budget for the past 3 months. Great job!</td>
+            </tr>
+            <tr>
+              <th>Suggestions</th>
+              <td>Keep track of your expenses weekly to stay on target with your savings goals.</td>
+            </tr>
+          </table>
+        </div>
+      `;
+      reportSection.innerHTML = reportContent; // Insert the generated report
+      document.querySelector('.generated-report').classList.add('show'); // Show the report
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo-container">
+        <img src="assets/images/smart-home-3653441.png" alt="Smart Spending Logo" class="logo">
+        <h1>Smart Spending</h1>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="log-expense.html">Log Expense</a></li>
+        <li><a href="budget-planner.html">Set Budget</a></li>
+        <li><a href="view-reports.html">View Reports</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <main>
+    <section class="reports">
+      <h2>Your Spending Reports</h2>
+      <p>Here you can view detailed reports on your spending trends, income, and savings progress.</p>
+      <button onclick="generateReport()">Generate Report</button>
+    </section>
+
+    <section id="report-section" class="generated-report">
+      <!-- The generated report will be inserted here dynamically -->
+    </section>
+  </main>
+  
+  <footer>
+    <p>© 2024 Smart Spending. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
